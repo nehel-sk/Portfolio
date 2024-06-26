@@ -1,4 +1,4 @@
-import Intro from "./Componenets/Into/Intro";
+import Intro from "./Componenets/Intro/Intro";
 import Navigation from "./Componenets/Navigation/Navigation";
 import Skills from "./Componenets/Skills/Skills";
 import Works from "./Componenets/Works/Works";
