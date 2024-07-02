@@ -56,3 +56,96 @@
         height: 48vw;
     }     
 }
+
+/* cards */
+
+.workCards{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    width: 100vw;
+    max-width: 60rem;
+}
+
+.card{
+    height: 20rem;
+    width: 15rem;
+    margin: 0.5rem;
+    border-radius: 0.5rem;
+    background: rgb(40,40,40);
+    align-content: center;
+    position: relative;
+    
+}
+
+.card::before{
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    border-radius: 0.5rem;
+    background-size: cover;
+    background-position: center;
+    opacity: 0.3;
+    z-index: 1;
+}
+
+.card1::before{
+    background-image: url('../../Assests/bg2.jpg');
+    
+}
+
+.card2::before{
+    background-image: url('../../Assests/bg1.jpg');
+    
+}
+
+.card3::before{
+    background-image: url('../../Assests/bg3.jpg');
+    
+}
+
+.card4::before{
+    background-image: url('../../Assests/bg4.jpg');
+    
+}
+
+.card5::before{
+    background-image: url('../../Assests/bg5.jpg');
+    
+}
+
+
+.cardContent{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    z-index: 2;
+    
+}
+
+.cardContent p{
+    margin-top: 1rem;
+    font-size: small;
+    padding: 0.35rem;
+}
+
+.cardBtn {
+    background-color:rgb(30,30,30);
+    color: #ffffff;
+    padding: 8px 16px;
+    border: none;
+    cursor: pointer;
+    margin-top: 1rem;
+}
+
+@media screen and (max-width:580px){
+    .card{
+        height: 48vw;
+    }     
+}

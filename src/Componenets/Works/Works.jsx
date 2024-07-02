@@ -1,27 +1,73 @@
-import React from 'react'
+import React, { useState } from 'react'
 import './Works.css'
-import Port1 from '../../Assests/Port1.jpg'
-import Port2 from '../../Assests/Port2.jpg'
-import Port3 from '../../Assests/Port3.jpg'
-import Port4 from '../../Assests/Port4.jpg'
-import Port5 from '../../Assests/Port5.jpg'
-import Port6 from '../../Assests/Port6.jpg'
 
 function Works() {
+
+  const [show,setShow]=useState(false);
+
+  const handleClick=()=>{
+    setShow(!show);
+  }
+
   return (
     <section id='works'>
         <h2 className="worksTitle">My Portfolio</h2>
-        <span className='worksDesc'>Lorem ipsum dolor sit amet consectetur adipisicing elit. Tenetur, omnis nulla! Assumenda corporis ipsa consequuntur
-         vitae! Ipsa reprehenderit iusto ratione, nam id error! Eligendi doloribus error debitis rerum, amet beatae.</span>
-        <div className="worksImgs">
-            <img src={Port1} alt="PortImg" className="worksImg" />
-            <img src={Port2} alt="PortImg" className="worksImg" />
-            <img src={Port3} alt="PortImg" className="worksImg" />
-            <img src={Port4} alt="PortImg" className="worksImg" />
-            <img src={Port5} alt="PortImg" className="worksImg" />
-            <img src={Port6} alt="PortImg" className="worksImg" />
+        <span className='worksDesc'>Explore a showcase of my work as a Full Stack Developer, 
+        highlighting my expertise in creating responsive web applications. </span>
+        
+
+        <div className="workCards">
+          <div className="card card1">
+            <div className="cardContent">
+              <h3>Curlz</h3>
+              <p>Curlz is a React-based web app for efficient salon appointment bookings using C# and ASP.NET Web API.</p>
+              {/* <button className="cardBtn">View Project</button> */}
+            </div>
+          </div>
+
+          <div className="card card2">
+            <div className="cardContent">
+              <h3>Netflix Clone</h3>
+              <p>Netflix Clone is a ReactJS web app replicating Netflix's interface with seamless video playback.</p>
+              {/* <button className="cardBtn">View Project</button> */}
+            </div>
+          </div>
+
+          <div className="card card3">
+            <div className="cardContent">
+              <h3>Musicfy</h3>
+              <p>Musicfy is a React-based web app for playing and managing music with an intuitive, user-friendly interface.</p>
+              {/* <button className="cardBtn">View Project</button> */}
+            </div>
+          </div>
+          
+          {show &&
+          <div className="card card4" >
+            <div className="cardContent">
+              <h3>To-Do List</h3>
+              <p>ToDo List is a React-based web application designed for managing tasks efficiently with a clean and user-friendly interface.</p>
+              {/* <button className="cardBtn">View Project</button> */}
+            </div>
+          </div>
+          }
+
+          {show &&
+          <div className="card card5" >
+            <div className="cardContent">
+              <h3>Tic-Tac-Toe</h3>
+              <p>It is a React-based application that allows users to play the classic game of Tic-Tac-Toe.</p>
+              {/* <button className="cardBtn">View Project</button> */}
+            </div>
+          </div>
+          }
+
+
         </div>
-        <button className="worksBtn">See More</button>
+        {!show && 
+        <button className="worksBtn" onClick={handleClick}>See More</button>}
+
+        {show && 
+        <button className="worksBtn" onClick={handleClick}>Show Less</button>}
     </section>
   )
 }
